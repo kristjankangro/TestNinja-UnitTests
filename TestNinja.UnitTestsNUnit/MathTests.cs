@@ -29,4 +29,17 @@ public class MathTests
         
         Assert.That(result, Is.EqualTo(expected));
     }
+
+    [Test]
+    public void GetOddTest_LimitIsGreaterThanZero_REturnOddNumbersUpToLimit()
+    {
+        var res = _math.GetOddNumbers(5);
+        
+        // Assert.That(res, Is.Not.Empty);
+        // Assert.That(res.Count(), Is.EqualTo(3));
+        // Assert.That(res, Does.Contain(1));
+        // Assert.That(res, Does.Contain(2));
+        // Assert.That(res, Does.Contain(3));
+        Assert.That(res, Is.EquivalentTo(new [] {1,3,5}));
+    }
 }
